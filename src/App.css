@@ -1,0 +1,276 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 7.5%;
+}
+
+.topbar {
+  display: flex;
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ecebe8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #20261f;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 9px;
+  background: #d8f276;
+  color: #27321b;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.topbar-label,
+.eyebrow,
+.equation-label {
+  color: #899085;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.solver {
+  width: min(100%, 540px);
+  margin: auto;
+  padding: 64px 0 78px;
+}
+
+.eyebrow {
+  margin: 0 0 17px;
+}
+
+h1 {
+  margin: 0;
+  color: #242920;
+  font-size: clamp(32px, 6vw, 44px);
+  font-weight: 650;
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+
+h1 span {
+  color: #718c37;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.intro {
+  margin: 13px 0 34px;
+  color: #777d72;
+  font-size: 15px;
+}
+
+.equation-card {
+  padding: 22px 26px 19px;
+  border: 1px solid #e8e9e3;
+  border-radius: 12px;
+  background: #fbfcf8;
+}
+
+.equation-label {
+  font-size: 10px;
+}
+
+.equation {
+  margin: 13px 0 19px;
+  color: #252a22;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(34px, 8vw, 46px);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.attempts {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.attempt-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d9e2c7;
+}
+
+.attempt-dot.used {
+  background: #8da65b;
+}
+
+.attempt-copy {
+  margin-left: 5px;
+  color: #858b7e;
+  font-size: 12px;
+}
+
+.answer-form {
+  margin-top: 25px;
+}
+
+.answer-form label {
+  display: block;
+  margin-bottom: 9px;
+  color: #343a31;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.answer-form label span {
+  color: #91968e;
+  font-weight: 400;
+}
+
+.answer-controls {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: 1px solid #e1e4dc;
+  border-radius: 9px;
+  background: white;
+}
+
+.input-prefix {
+  padding-left: 10px;
+  color: #88917d;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.answer-controls input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #252a22;
+  font: inherit;
+  font-size: 14px;
+}
+
+.answer-controls input::placeholder {
+  color: #a9ada5;
+}
+
+.answer-controls:focus-within {
+  border-color: #9aae73;
+  box-shadow: 0 0 0 3px #edf2e3;
+}
+
+.answer-controls button,
+.next-button {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #34432a;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 150ms ease;
+}
+
+.answer-controls button {
+  padding: 11px 16px;
+}
+
+.answer-controls button:hover,
+.next-button:hover {
+  background: #4b6039;
+}
+
+.answer-controls button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.feedback {
+  min-height: 24px;
+  margin-top: 13px;
+  color: #777d72;
+  font-size: 13px;
+}
+
+.feedback.correct {
+  color: #54752f;
+}
+
+.feedback.incorrect,
+.feedback.invalid {
+  color: #a45f3c;
+}
+
+.feedback.revealed {
+  color: #4e6138;
+}
+
+.next-button {
+  margin-top: 6px;
+  padding: 12px 16px;
+}
+
+.next-button span {
+  margin-left: 7px;
+}
+
+.page-footer {
+  padding: 18px 0 24px;
+  border-top: 1px solid #ecebe8;
+  color: #969b91;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 0 22px;
+  }
+
+  .topbar {
+    height: 64px;
+  }
+
+  .solver {
+    padding: 48px 0 56px;
+  }
+
+  .equation-card {
+    padding: 19px 20px 17px;
+  }
+
+  .answer-controls {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .answer-controls input {
+    width: calc(100% - 58px);
+    height: 34px;
+  }
+
+  .answer-controls button {
+    width: 100%;
+  }
+}
